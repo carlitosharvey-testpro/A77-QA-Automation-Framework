@@ -20,40 +20,15 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(homePage.getUserAvatar().isDisplayed());
     }
 
-    /*@Test (dataProvider = "IncorrectLoginData", dataProviderClass = BaseTest.class, enabled = true, priority = 0, description = "Login with invalid email and valid password")
-    public void loginInvalidEmailValidPassword(String email, String password) throws InterruptedException {
+    @Test
+    public void loginInvalidEmailInvalidPassword() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
 
-        provideEmail(email);
-        providePassword(password);
-        clickSubmit();
+        loginPage.provideEmail("carlitos@testpro.io");
+        loginPage.providePassword("vjNWk4Hn");
+        loginPage.clickSubmit();
 
-        Thread.sleep(2000);
         Assert.assertEquals(driver.getCurrentUrl(), url); //https://qa.koel.app/
     }
-
-    @Test (enabled = true, priority = 1, description = "Login with valid email and valid password")
-    public void loginValidEmailPassword(){
-
-        navigateToPage();
-        provideEmail("demo@testpro.io");
-        providePassword("te$t$tudent");
-        clickSubmit();
-        isAvatarDisplayed();
-    }
-
-    @Test (enabled = true, priority = 3, description = "Login with valid email and empty password")
-    public void loginValidEmailEmptyPassword() throws InterruptedException {
-
-        navigateToPage();
-        provideEmail("demo@testpro.io");
-        providePassword("");
-        clickSubmit();
-
-        Thread.sleep(2000);
-        Assert.assertEquals(driver.getCurrentUrl(), url); //https://qa.koel.app/
-    }
-    public  void isAvatarDisplayed() {
-        WebElement avatarIcon = driver.findElement(By.cssSelector("img[class='avatar']"));
-        Assert.assertTrue(avatarIcon.isDisplayed());
-    }*/
 }
