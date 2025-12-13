@@ -10,8 +10,8 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginValidEmailValidPassword() {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
 
         loginPage.provideEmail("carlitos@testpro.io");
         loginPage.providePassword("vjNWk4Hn");
@@ -22,13 +22,13 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void loginInvalidEmailInvalidPassword() {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
 
-        loginPage.provideEmail("carlitos@testpro.io");
-        loginPage.providePassword("vjNWk4Hn");
+        loginPage.provideEmail("demotest@testpro.io");
+        loginPage.providePassword("incorrectpassword");
         loginPage.clickSubmit();
 
-        Assert.assertEquals(driver.getCurrentUrl(), url); //https://qa.koel.app/
+        Assert.assertEquals(getDriver().getCurrentUrl(), url); //https://qa.koel.app/
     }
 }
