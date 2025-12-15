@@ -16,10 +16,12 @@ public class LoginPage extends BasePage {
 
     //Fluent interface
     public LoginPage provideEmail(String email) {
+      emailField.clear();
       emailField.sendKeys(email);
       return this;
     }
     public LoginPage providePassword(String password) {
+        passwordField.clear();
         passwordField.sendKeys(password);
         return this;
     }
