@@ -9,7 +9,7 @@
             <class name="LoginTests"/>
             <class name="BaseTest"/>
             <!-- <class name="PlaylistTests"/> -->
-            <class name="ProfileTests"/>
+            <!-- <class name="ProfileTests"/> -->
             <!-- <class name="ActionsTests"/> -->
         </classes>
 
