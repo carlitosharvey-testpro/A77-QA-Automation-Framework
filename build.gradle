@@ -13,6 +13,10 @@ dependencies {
     testImplementation 'org.testng:testng:7.11.0'
     implementation 'org.seleniumhq.selenium:selenium-java:4.39.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:6.3.3'
+    implementation 'io.cucumber:cucumber-testng:7.33.0'
+    implementation 'io.cucumber:cucumber-core:7.33.0'
+    implementation 'io.cucumber:cucumber-java:7.33.0'
+    implementation 'io.cucumber:gherkin:7.37.0'
 }
 
 test {

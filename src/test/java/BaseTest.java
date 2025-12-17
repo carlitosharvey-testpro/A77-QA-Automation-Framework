@@ -112,7 +112,7 @@ public class BaseTest {
         driver.quit();
     }
 
-    public  void navigateToPage() {
+    public void navigateToPage() {
         getDriver().get(url);
     }
 
