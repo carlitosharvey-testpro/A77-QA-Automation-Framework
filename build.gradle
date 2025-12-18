@@ -13,11 +13,15 @@ dependencies {
     testImplementation 'org.testng:testng:7.11.0'
     implementation 'org.seleniumhq.selenium:selenium-java:4.39.0'
     testImplementation 'io.github.bonigarcia:webdrivermanager:6.3.3'
+    implementation 'io.cucumber:cucumber-testng:7.33.0'
+    implementation 'io.cucumber:cucumber-core:7.33.0'
+    implementation 'io.cucumber:cucumber-java:7.33.0'
+    implementation 'io.cucumber:gherkin:37.0.0'
 }
 
 test {
     useTestNG() {
-        suites "src/test/resources/TestNG.xml"
+        suites "src/test/resources/Cucumber.xml"
         systemProperty("browser", System.getProperty("browser"))
     }
 }
